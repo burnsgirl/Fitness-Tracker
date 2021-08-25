@@ -25,7 +25,8 @@ router.get("/api/workouts", (req, res) => {
             }
         }
     ]).limit(7)
-    // .then or try catch
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
 });
 
 //View the total duration of each workout from the past seven workouts
@@ -37,7 +38,8 @@ router.get("/api/workouts/days", (req, res) => {
             }
         }
     ]).limit(7)
-    // .then
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
 });
 
 module.exports = router;
