@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const Workout = require("../Models/workout");
 
-//Add exercise to the most recent workout plan
+//Add exercise to the most recent workout
 router.put("/api/workouts/:id", (req,res) => {
     // findone and update and pass through id to update
 });
 
-//Add new exercise to a new workout plan
+//Add new exercise
 router.post("/api/workouts", (req, res) => {
     try {
         const workoutData = await Workout.create(req.body);
@@ -16,7 +16,7 @@ router.post("/api/workouts", (req, res) => {
     }
 });
 
-//View the combined weight of multiple exercises from the past seven workouts on the stats page
+//View the combined weight of multiple exercises from the past seven workouts
 router.get("/api/workouts", (req, res) => {
     Workout.aggregrate( [
         {
@@ -28,7 +28,7 @@ router.get("/api/workouts", (req, res) => {
     // .then or try catch
 });
 
-//View the total duration of each workout from the past seven workouts on the stats page
+//View the total duration of each workout from the past seven workouts
 router.get("/api/workouts/days", (req, res) => {
     Workout.aggregate([
         {
