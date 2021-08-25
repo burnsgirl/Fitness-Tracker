@@ -4,6 +4,10 @@ const Workout = require("../Models/workout");
 //Add exercise to the most recent workout
 router.put("/api/workouts/:id", (req,res) => {
     // findone and update and pass through id to update
+    Workout.findOne(_id)
+
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
 });
 
 //Add new exercise
@@ -26,7 +30,8 @@ router.get("/api/workouts", (req, res) => {
         }
     ]).limit(7)
     .then((data) => res.json(data))
-    .catch((err) => res.json(err));
+    .catch((err => {
+        res.status(400).json(err)}))
 });
 
 //View the total duration of each workout from the past seven workouts
@@ -39,7 +44,8 @@ router.get("/api/workouts/days", (req, res) => {
         }
     ]).limit(7)
     .then((data) => res.json(data))
-    .catch((err) => res.json(err));
+    .catch((err => {
+        res.status(400).json(err)}))
 });
 
 module.exports = router;
