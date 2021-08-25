@@ -39,7 +39,7 @@ router.get("/api/workouts", (req, res) => {
 });
 
 //View the total duration of each workout from the past seven workouts
-router.get("/api/workouts/days", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     Workout.aggregate([
         {
             $addFields: {
