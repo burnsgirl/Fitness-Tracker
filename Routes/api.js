@@ -15,12 +15,13 @@ router.put("/api/workouts/:id", (req,res) => {
 
 //Add new exercise
 router.post("/api/workouts", (req, res) => {
-    try {
-        const workoutData = await Workout.create(req.body);
+
+        const workoutData = Workout.create(req.body);
         res.status(200).json(workoutData)
-    } catch (err) {
-        res.status(400).json(err);
-    }
+        .then((data) => res.json(data))
+        .catch ((err) => {
+        res.status(400).json(err)})
+    
 });
 
 //View the combined weight of multiple exercises from the past seven workouts
