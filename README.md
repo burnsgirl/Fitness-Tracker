@@ -2,6 +2,7 @@
 
 ![Github License](https://img.shields.io/badge/license-none-blue.svg)
   ## Description
+  With this site you can add exercises to a workout plan. You create a name for the workout plan and then add in the following information. With this site you can also view the combined weight and duration of your last 7 workouts.
 <!-- <img src="Assests/one.png"> -->
 
 https://github.com/burnsgirl/Fitness-Tracker
@@ -22,13 +23,13 @@ For this project ...
 [Contact](#contact)
 
 ## Installation
-
+You will not need to install any packages to use this program.
 
 ## Usage
-
+This site was developed so you can keep track of your exercises. It will help you stay on track of how you are doing time wise and weight wise.
 
 ## Technologies
-Technologies used: HTML, JavaScript, ...
+Technologies used: HTML, JavaScript, CSS, Express.JS, Node.JS, Mongo, Mongoose, 
 
 ## License
 License: None
