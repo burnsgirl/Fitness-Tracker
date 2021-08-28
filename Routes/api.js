@@ -16,8 +16,7 @@ router.put("/api/workouts/:id", (req,res) => {
 //Add new exercise
 router.post("/api/workouts", (req, res) => {
 
-        const workoutData = Workout.create(req.body);
-        res.status(200).json(workoutData)
+        Workout.create({})
         .then((data) => res.json(data))
         .catch ((err) => {
         res.status(400).json(err)})
@@ -29,10 +28,13 @@ router.get("/api/workouts", (req, res) => {
     Workout.aggregate( [
         {
             $addFields: {
-                totalWeight: {$sum: "$exercises.weight"}
-            }
-        }
-    ]).limit(7)
+                totalWeight: {
+                    $sum: "$exercises.weight"
+                },
+            },
+        },
+    ])
+    .limit(7)
     .then((data) => res.json(data))
     .catch((err => {
         res.status(400).json(err)}))
@@ -42,10 +44,13 @@ router.get("/api/workouts", (req, res) => {
 router.get("/api/workouts/range", (req, res) => {
     Workout.aggregate([
         {
-            $addFields: {
-                totalDuration: {$sum: "$exercises.duration"}
-            }
-        }
+            $addFields: 
+            {
+                totalDuration: {
+                    $sum: "$exercises.duration"
+                },
+            },
+        },
     ])
     .sort({_id: -1})
     .limit(7)
