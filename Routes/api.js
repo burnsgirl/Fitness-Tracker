@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Workout = require("../Models/workout");
+const Workout = require("../Models/Workout");
 
 //Add exercise to the most recent workout
 router.put("/api/workouts/:id", (req,res) => {
@@ -46,7 +46,9 @@ router.get("/api/workouts/range", (req, res) => {
                 totalDuration: {$sum: "$exercises.duration"}
             }
         }
-    ]).limit(7)
+    ])
+    .sort({_id: -1})
+    .limit(7)
     .then((data) => res.json(data))
     .catch((err => {
         res.status(400).json(err)}))
