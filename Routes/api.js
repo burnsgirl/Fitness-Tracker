@@ -26,7 +26,7 @@ router.post("/api/workouts", (req, res) => {
 
 //View the combined weight of multiple exercises from the past seven workouts
 router.get("/api/workouts", (req, res) => {
-    Workout.aggregrate( [
+    Workout.aggregate( [
         {
             $addFields: {
                 totalWeight: {$sum: "$exercises.weight"}
