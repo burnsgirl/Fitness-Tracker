@@ -29,7 +29,7 @@ You will not need to install any packages to use this program.
 This site was developed so you can keep track of your exercises. It will help you stay on track of how you are doing time wise and weight wise.
 
 ## Technologies
-Technologies used: HTML, JavaScript, CSS, Express.JS, Node.JS, Mongo, Mongoose, 
+Technologies used: HTML, JavaScript, CSS, Express.JS, Node.JS, MongoBD Atlas, Mongoose
 
 ## License
 License: None
