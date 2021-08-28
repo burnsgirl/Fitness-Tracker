@@ -4,8 +4,8 @@ const Workout = require("../Models/workout");
 //Add exercise to the most recent workout
 router.put("/api/workouts/:id", (req,res) => {
     // findone and update and pass through id to update
-    Workout.findOne(
-        params.id, {$push: {exercises:body}}
+    Workout.findByIdAndUpdate(
+        req.params.id, {$push: {exercises: req.body}}
     )
 
     .then((data) => res.json(data))
