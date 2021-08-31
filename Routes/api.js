@@ -40,7 +40,7 @@ router.get("/api/workouts", (req, res) => {
         res.status(400).json(err)}))
 });
 
-//View the total duration of each workout from the past seven workouts
+//View the total duration of each workout from the past seven workouts///
 router.get("/api/workouts/range", (req, res) => {
     Workout.aggregate([
         {
