@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Workout = require("../Models/Workout");
+const Workout = require("../Models/workout");
 
 //Add exercise to the most recent workout
 router.put("/api/workouts/:id", (req,res) => {
