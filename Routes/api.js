@@ -14,9 +14,9 @@ router.put("/api/workouts/:id", (req,res) => {
 });
 
 //Add new exercise
-router.post("/api/workouts", (req, res) => {
+router.post("/api/workouts", ({body}, res) => {
 
-        Workout.create({})
+        Workout.create(body)
         .then((data) => res.json(data))
         .catch ((err) => {
         res.status(400).json(err)})
@@ -28,8 +28,8 @@ router.get("/api/workouts", (req, res) => {
     Workout.aggregate( [
         {
             $addFields: {
-                totalWeight: {
-                    $sum: "$exercises.weight"
+                totalDuration: {
+                    $sum: "$exercises.duration"
                 },
             },
         },
