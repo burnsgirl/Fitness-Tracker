@@ -7,7 +7,7 @@
 
 https://github.com/burnsgirl/Fitness-Tracker
 
-https://burnsgirl.github.io/Fitness-Tracker/
+https://fitnesstracker20212021.herokuapp.com/?id=612ee156e3240b0016a40960
 
 For this project ...
 
