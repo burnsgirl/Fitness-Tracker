@@ -8,9 +8,8 @@
 <img src= "public/Assets/two.png">
 <img src= "public/Assets/three.png">
 
-https://github.com/burnsgirl/Fitness-Tracker
 
-https://fitnesstracker20212021.herokuapp.com/?id=612ee156e3240b0016a40960
+[Repo](https://github.com/burnsgirl/Fitness-Tracker)    |    [Deployed](https://fitnesstracker20212021.herokuapp.com/?id=612ee156e3240b0016a40960)
 
 
 ## Table of Contents
